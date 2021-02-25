@@ -8,3 +8,8 @@ export const getScene1 = createSelector(
   getState,
   (state: countState) => state.item
 );
+
+export const getScene2 = createSelector(
+  getState,
+  (state: countState) => state.item2
+);

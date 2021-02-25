@@ -1,13 +1,12 @@
-import { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { getHero } from "../../store/hero/selectors";
 import { Hero } from "../../store/hero/type";
-import "./start.scss";
+import "./scene1.scss";
 import Scene1EventHandler from "../../hooks/scene1EventHandler";
 import { getScene1 } from "../../store/scene1/selectors";
 import { Map } from "../../store/scene1/type";
 
-function Start() {
+function Scene1() {
   const hero = useSelector(getHero) as Hero;
   const scene1 = useSelector(getScene1) as Map;
   Scene1EventHandler(scene1);
@@ -34,4 +33,4 @@ function Start() {
   );
 }
 
-export default Start;
+export default Scene1;

@@ -22,6 +22,12 @@ const Scene1EventHandler = (map: Map) => {
       dispatch(fetchScene1(map));
     };
 
+    // next
+    if (map?.[hero.y]?.[hero.x - 1]?.name === "next") {
+      dispatch(fetchCount(2));
+      dispatch(fetch({ ...hero, x: 0, y: 1 }));
+    }
+
     // 獸人
     if (map?.[y]?.[x]?.name === "smorc") {
       if (hero.hp > 20) {
@@ -74,7 +80,7 @@ const Scene1EventHandler = (map: Map) => {
     // 500
     if (map?.[y]?.[x]?.name === "sta") {
       step();
-      dispatch(fetchMessage("機器人軍團幫你助陣，獲得了1000金幣。"));
+      dispatch(fetchMessage("５００大軍幫你助陣，獲得了1000金幣。"));
       dispatch(fetch({ ...hero, money: hero.money + 1000 }));
     }
 
@@ -126,7 +132,7 @@ const Scene1EventHandler = (map: Map) => {
       // top
       if (event.keyCode === 38 && hero.y > 0) {
         dispatch(fetchMessage(""));
-        if (map?.[hero.y - 1]?.[hero.x].exists) {
+        if (map?.[hero.y - 1]?.[hero.x]?.exists) {
           updateScene1(hero.y - 1, hero.x, map);
           return;
         }
@@ -137,7 +143,7 @@ const Scene1EventHandler = (map: Map) => {
       // buttom
       if (event.keyCode === 40 && hero.y < 10) {
         dispatch(fetchMessage(""));
-        if (map?.[hero.y + 1]?.[hero.x].exists) {
+        if (map?.[hero.y + 1]?.[hero.x]?.exists) {
           updateScene1(hero.y + 1, hero.x, map);
           return;
         }
@@ -148,10 +154,8 @@ const Scene1EventHandler = (map: Map) => {
       // left
       if (event.keyCode === 37 && hero.x > 0) {
         dispatch(fetchMessage(""));
-        if (map?.[hero.y]?.[hero.x - 1].exists) {
+        if (map?.[hero.y]?.[hero.x - 1]?.exists) {
           updateScene1(hero.y, hero.x - 1, map);
-          if (map?.[hero.y]?.[hero.x - 1].name === "next")
-            dispatch(fetchCount(2));
           return;
         }
         dispatch(fetch({ ...hero, x: hero.x - 1 }));
@@ -161,7 +165,7 @@ const Scene1EventHandler = (map: Map) => {
       // right
       if (event.keyCode === 39 && hero.x < 10) {
         dispatch(fetchMessage(""));
-        if (map?.[hero.y]?.[hero.x + 1].exists) {
+        if (map?.[hero.y]?.[hero.x + 1]?.exists) {
           updateScene1(hero.y, hero.x + 1, map);
           return;
         }

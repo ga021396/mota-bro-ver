@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import { getCount } from "./store/count/selectors";
 import { fetchCount } from "./store/count/action";
 import { useDispatch } from "react-redux";
-import Start from "./pages/Start";
+import Scene1 from "./pages/Scene1";
+import Scene2 from "./pages/Scene2";
 import Opening from "./pages/Opening";
 import Doc from "./pages/Doc";
 import Text from "./pages/Text";
@@ -28,7 +29,8 @@ function App() {
       {stage === -1 && <Doc back={handleback}></Doc>}
       {stage > 0 && <Sidebar stage={stage}></Sidebar>}
       <div>
-        {stage === 1 && <Start></Start>}
+        {stage === 1 && <Scene1></Scene1>}
+        {stage === 2 && <Scene2></Scene2>}
         {stage > 0 && <Text></Text>}
       </div>
     </div>

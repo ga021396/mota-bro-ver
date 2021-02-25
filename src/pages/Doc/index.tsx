@@ -4,9 +4,9 @@ function Doc({ back }: any) {
     <div className="scene-container">
       <div className="docCon">
         <p>
-          選擇角色進入遊戲，上下左右移動，碰撞NPC進入戰鬥，錢可以用來分配血、攻擊、防禦。
+          選擇角色進入遊戲，上下左右移動，碰撞NPC進入戰鬥，錢可以用來分配血量、攻擊、防禦。
         </p>
-        <p>所有角色都有結局，想通關請謹慎分配點數。</p>
+        <p>四位角色都有屬於自己的結局，想通關請謹慎分配點數。</p>
         <p>任何遊戲上的意見私 twitch : windchi。</p>
 
         <div>其他小遊戲</div>
