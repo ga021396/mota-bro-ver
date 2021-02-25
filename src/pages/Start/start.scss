@@ -1,0 +1,163 @@
+.start-container {
+  position: relative;
+  color: white;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  border: 25px solid #845332;
+  box-sizing: border-box;
+  background-color: #4f4f4f;
+
+  .sam {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+    animation: Samgan 0.3s infinite linear;
+  }
+
+  .rb {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/rb_gan2.0");
+    background-size: 50px 50px;
+    animation: RBgan 0.3s infinite linear;
+  }
+  .arwei {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+    animation: ARgan 0.3s infinite linear;
+  }
+  .smorc {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/SMO.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .k7 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/k7.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .afa {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/afaO.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .mmd {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/MMD.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .sta {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/500.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+}
+
+.wall {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #845332;
+}
+
+.next {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: url("../../image/twitch.0");
+  background-size: 50px 50px;
+}
+
+@keyframes RBgan {
+  0% {
+    background: url("../../image/rb_gan.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background: url("../../image/rb_gan2.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background: url("../../image/rb_gan.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes Samgan {
+  0% {
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background-image: url("../../image/sam_gan2.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes ARgan {
+  0% {
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background-image: url("../../image/ar_gan.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes SMORC {
+  0% {
+    transform: rotateZ(0);
+    background-size: 50px 50px;
+  }
+  25% {
+    transform: rotateZ(5deg);
+    background-size: 50px 50px;
+  }
+  50% {
+    transform: rotateZ(0);
+    background-size: 50px 50px;
+  }
+  75% {
+    transform: rotateZ(5deg);
+    background-size: 50px 50px;
+  }
+  100% {
+    transform: rotateZ(0);
+    background-size: 50px 50px;
+  }
+}

@@ -1,0 +1,25 @@
+.scene-container {
+  position: relative;
+  color: white;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.docCon {
+  padding: 20px;
+  a {
+    color: white;
+    margin-right: 20px;
+  }
+  div {
+    margin-top: 40px;
+  }
+}

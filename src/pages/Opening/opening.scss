@@ -1,0 +1,168 @@
+.scene-container {
+  position: relative;
+  color: white;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.des {
+  font-size: 40px;
+}
+
+.Btn {
+  transition: all 0.3s ease-in-out;
+  background-color: black; /* Green */
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 16px 0;
+  border-radius: 5px;
+  &:hover {
+    background-color: white; /* Green */
+    border: 1px solid black;
+    color: black;
+  }
+}
+
+.role {
+  font-weight: bold;
+  margin: 100px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .roleCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sam {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+    margin-top: 8px;
+    cursor: pointer;
+    &:hover {
+      animation: Samgan 0.1s infinite linear;
+    }
+  }
+  .rb {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/rb_gan2.0");
+    background-size: 50px 50px;
+    margin-top: 8px;
+    cursor: pointer;
+    &:hover {
+      animation: RBgan 0.3s infinite linear;
+    }
+  }
+  .arwei {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+    margin-top: 8px;
+    cursor: pointer;
+    &:hover {
+      animation: ARgan 0.3s infinite linear;
+    }
+  }
+  .lee {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin-top: 8px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      animation: Leegan 0.3s infinite linear;
+    }
+  }
+}
+
+@keyframes RBgan {
+  0% {
+    background: url("../../image/rb_gan.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background: url("../../image/rb_gan2.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background: url("../../image/rb_gan.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes Samgan {
+  0% {
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background-image: url("../../image/sam_gan2.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes ARgan {
+  0% {
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background-image: url("../../image/ar_gan.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes Leegan {
+  0% {
+    border: 1px solid white;
+  }
+  50% {
+    border: 1px solid black;
+    background: white;
+  }
+  100% {
+    border: 1px solid white;
+  }
+}
+
+.titleCon {
+  padding: 20px;
+}
+.btnCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
