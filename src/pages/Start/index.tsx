@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { getHero } from "../../store/hero/selectors";
 import { Hero } from "../../store/hero/type";
 import "./start.scss";
-import useUpdateHero from "../../hooks";
+import Scene1EventHandler from "../../hooks/scene1EventHandler";
 import { getScene1 } from "../../store/scene1/selectors";
 import { Map } from "../../store/scene1/type";
 
 function Start() {
   const hero = useSelector(getHero) as Hero;
   const scene1 = useSelector(getScene1) as Map;
-  useUpdateHero(scene1);
+  Scene1EventHandler(scene1);
 
   return (
     <div className="start-container">

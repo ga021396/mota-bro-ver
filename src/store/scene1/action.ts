@@ -12,6 +12,5 @@ export const fetchScene1 = (map: Map): any => async (
   dispatch: Dispatch<RootAction>,
   getState: () => RootState
 ) => {
-  console.log(map);
   dispatch(fetchAsync.success(map));
 };

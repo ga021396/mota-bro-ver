@@ -61,6 +61,10 @@
       animation: Samgan 0.1s infinite linear;
     }
   }
+
+  .samSelected {
+    animation: Samgan 0.1s infinite linear;
+  }
   .rb {
     position: relative;
     height: 50px;
@@ -73,6 +77,10 @@
       animation: RBgan 0.3s infinite linear;
     }
   }
+  .rbSelected {
+    animation: RBgan 0.3s infinite linear;
+  }
+
   .arwei {
     position: relative;
     height: 50px;
@@ -85,14 +93,18 @@
       animation: ARgan 0.3s infinite linear;
     }
   }
+  .arSelected {
+    animation: ARgan 0.3s infinite linear;
+  }
+
   .lee {
     position: relative;
     height: 50px;
     width: 50px;
     margin-top: 8px;
-    border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid #111111;
     &:hover {
       animation: Leegan 0.3s infinite linear;
     }

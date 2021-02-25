@@ -3,37 +3,37 @@ import { createReducer } from "typesafe-actions";
 import { fetchAsync } from "./action";
 
 const w = {
-  exists: true,
+  exists: 1,
   name: "wall",
 };
 
 const n = {
-  exists: true,
+  exists: 1,
   name: "next",
 };
 
 const S = {
-  exists: true,
+  exists: 1,
   name: "smorc",
 };
 
 const A = {
-  exists: true,
+  exists: 2,
   name: "afa",
 };
 
 const K = {
-  exists: true,
+  exists: 3,
   name: "k7",
 };
 
 const M = {
-  exists: true,
+  exists: 3,
   name: "mmd",
 };
 
 const F = {
-  exists: true,
+  exists: 1,
   name: "sta",
 };
 
