@@ -11,6 +11,8 @@ import {
   initMap5Sam,
   initMap5Arwei,
   initMap5Rb,
+  initMap5RbHid,
+  initMap5SamHid,
 } from "../../store/scene1/data";
 
 function Scene5() {
@@ -23,13 +25,17 @@ function Scene5() {
     if (scene5.length <= 0) {
       switch (hero.name) {
         case "sam":
-          dispatch(fetchScene5(initMap5Sam as Map));
+          if (hero.hiddenEnd) {
+            dispatch(fetchScene5(initMap5SamHid as Map));
+          } else dispatch(fetchScene5(initMap5Sam as Map));
           return;
         case "arwei":
           dispatch(fetchScene5(initMap5Arwei as Map));
           return;
         case "rb":
-          dispatch(fetchScene5(initMap5Rb as Map));
+          if (hero.hiddenEnd) {
+            dispatch(fetchScene5(initMap5RbHid as Map));
+          } else dispatch(fetchScene5(initMap5Rb as Map));
           return;
       }
     }

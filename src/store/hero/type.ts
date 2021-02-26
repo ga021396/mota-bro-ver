@@ -9,4 +9,5 @@ export type Hero = {
   money: number;
   key?: number;
   end?: boolean;
+  hiddenEnd?: boolean;
 };

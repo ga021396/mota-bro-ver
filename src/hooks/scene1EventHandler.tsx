@@ -24,6 +24,10 @@ const Scene1EventHandler = (map: Map) => {
       map[y][x] = { ...map[y][x], exists: getExists() - 1 };
     };
 
+    const stepUp = () => {
+      map[y][x] = { ...map[y][x], exists: getExists() + 1 };
+    };
+
     // snow
     if (getName() === "snow") {
       if (hero.hp > 5920) {
@@ -48,8 +52,9 @@ const Scene1EventHandler = (map: Map) => {
           dispatch(fetchMessage("我答應你。"));
           step();
         } else if (getExists() === 1) {
-          dispatch(fetchMessage("我們再一起吧!"));
+          dispatch(fetchMessage("我們在一起吧!"));
           dispatch(fetchCount(6));
+          dispatch(fetch({ ...hero, end: true }));
         }
       }
     }
@@ -242,8 +247,35 @@ const Scene1EventHandler = (map: Map) => {
 
     // chick
     if (getName() === "chick") {
-      step();
-      dispatch(fetchMessage("雞雞很癢，抓了一下。"));
+      if (hero.atk === 730) {
+        if (getExists() === 4) {
+          step();
+          dispatch(fetchMessage("我去。 。 。"));
+        } else if (getExists() === 3) {
+          step();
+          dispatch(
+            fetchMessage(
+              "看了這主播流出的視頻，又是扭腰擺臀，又是底褲外露，成天搔首弄姿活像個男娼似的。"
+            )
+          );
+        } else if (getExists() === 2) {
+          step();
+          dispatch(
+            fetchMessage(
+              "但不知怎地我的雞兒卻跟石頭一樣硬，到底是怎麼了我。 。"
+            )
+          );
+        } else if (getExists() === 1) {
+          step();
+          dispatch(
+            fetchMessage(
+              "聽到這席話，你內心終於豁然開朗，決定不在追尋過去，誓言成為圖奇羅蘭。"
+            )
+          );
+          dispatch(fetch({ ...hero, end: true, hiddenEnd: true, x: 5, y: 0 }));
+          dispatch(fetchCount(6));
+        }
+      } else dispatch(fetchMessage("雞雞很癢，抓了一下。"));
     }
 
     // nai
@@ -266,12 +298,36 @@ const Scene1EventHandler = (map: Map) => {
 
     // butt
     if (getName() === "butt") {
-      if (getExists() === 2) {
-        step();
-        dispatch(fetchMessage("你獲得阿蝶的安慰，HP+5000"));
-        dispatch(fetch({ ...hero, hp: hero.hp + 5000 }));
+      if (hero.hp === 520) {
+        if (getExists() === 4) {
+          dispatch(fetchMessage("我好想去ME阿!"));
+          stepUp();
+        } else if (getExists() === 5) {
+          dispatch(fetchMessage("蝴蝶兒"));
+          stepUp();
+        } else if (getExists() === 6) {
+          dispatch(fetchMessage("我愛你蝴蝶兒!"));
+          stepUp();
+        } else if (getExists() === 7) {
+          dispatch(fetchMessage("我好想跟妳生小孩啊!"));
+          stepUp();
+        } else if (getExists() === 8) {
+          dispatch(fetchMessage("啊啊啊啊啊啊啊啊啊啊 !"));
+          stepUp();
+        } else if (getExists() === 9) {
+          dispatch(fetchMessage("你決定放下一切，跟阿蝶遠走高飛。"));
+          dispatch(fetch({ ...hero, end: true, hiddenEnd: true, x: 5, y: 9 }));
+          dispatch(fetchCount(6));
+          stepUp();
+        }
       } else {
-        dispatch(fetchMessage("屁眼屁眼屁眼。"));
+        if (getExists() === 4) {
+          step();
+          dispatch(fetchMessage("你獲得阿蝶的安慰，HP+5000"));
+          dispatch(fetch({ ...hero, hp: hero.hp + 5000 }));
+        } else {
+          dispatch(fetchMessage("屁眼屁眼屁眼。"));
+        }
       }
     }
 
@@ -422,7 +478,7 @@ const Scene1EventHandler = (map: Map) => {
 
     if (getName() === "backTo3") {
       dispatch(fetchCount(3));
-      dispatch(fetch({ ...hero, x: 9, y: 1 }));
+      dispatch(fetch({ ...hero, x: 10, y: 1 }));
     }
 
     // 獸人

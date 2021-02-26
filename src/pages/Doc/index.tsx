@@ -3,6 +3,7 @@ function Doc({ back }: any) {
   return (
     <div className="scene-container">
       <div className="docCon">
+        <p>2/27 update: 修正錯字，新增Sam、RB隱藏結局，</p>
         <p>
           選擇角色進入遊戲，上下左右移動，碰撞NPC進入戰鬥，錢可以用來分配血量、攻擊、防禦。
         </p>

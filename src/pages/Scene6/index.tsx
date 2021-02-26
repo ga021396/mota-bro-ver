@@ -17,11 +17,20 @@ function Scene6() {
   const getUrl = () => {
     switch (hero.name) {
       case "sam":
-        if (hero.end) return "https://www.youtube.com/watch?v=zwqwZMYhRGc";
-        else return "https://www.youtube.com/watch?v=-zANQZ6_8rM";
+        if (hero.hiddenEnd)
+          return "https://www.youtube.com/watch?v=u_LIkmULba4&t=3s";
+        else {
+          if (hero.end) return "https://www.youtube.com/watch?v=zwqwZMYhRGc";
+          else return "https://www.youtube.com/watch?v=-zANQZ6_8rM";
+        }
+
       case "rb":
-        if (hero.end) return "https://www.youtube.com/watch?v=coQye04gQ0Q";
-        else return "https://www.youtube.com/watch?v=XprdTvnqVIg";
+        if (hero.hiddenEnd)
+          return "https://www.youtube.com/watch?v=JbkpHkqvvGY";
+        else {
+          if (hero.end) return "https://www.youtube.com/watch?v=coQye04gQ0Q";
+          else return "https://www.youtube.com/watch?v=XprdTvnqVIg";
+        }
     }
   };
 

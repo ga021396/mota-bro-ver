@@ -117,7 +117,7 @@ const b = {
 };
 
 const bu = {
-  exists: 2,
+  exists: 4,
   name: "butt",
 };
 
@@ -132,7 +132,7 @@ const na = {
 };
 
 const ch = {
-  exists: 1,
+  exists: 4,
   name: "chick",
 };
 
@@ -286,6 +286,20 @@ export const initMap5Sam = [
   [w, w, w, w, 0, 0, 0, w, w, w, w],
 ];
 
+export const initMap5SamHid = [
+  [w, w, w, w, 0, bu, 0, w, w, w, w],
+  [ka, dr, dr, dr, 0, 0, 0, dr, dr, dr, sn],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+  [w, w, w, w, S, 0, S, w, w, w, w],
+];
+
 export const initMap5Rb = [
   [w, w, w, w, 0, ni, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
@@ -298,6 +312,20 @@ export const initMap5Rb = [
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5RbHid = [
+  [w, w, w, w, ch, 0, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, w, ch, w, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
+  [w, w, w, w, ch, ch, ch, w, w, w, w],
 ];
 
 export const initMap5Arwei = [

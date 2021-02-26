@@ -1,7 +1,6 @@
 import { Dispatch } from "redux";
 import { createAsyncAction, RootAction, RootState } from "typesafe-actions";
 import { Error } from "./type";
-import { fetchRestaurant } from "./api";
 
 export const fetchAsync = createAsyncAction(
   "FETCH_REQUEST",

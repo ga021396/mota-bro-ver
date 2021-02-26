@@ -43,6 +43,24 @@
     animation: SMORC 1s infinite linear;
   }
 
+  .chick {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/chick.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .butt {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/butterfly.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
   .ani {
     position: absolute;
     height: 50px;

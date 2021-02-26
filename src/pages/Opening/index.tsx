@@ -84,7 +84,7 @@ function Opening({ next, exp }: any) {
 
   return (
     <div className="scene-container">
-      <div className="des">兄弟塔</div>
+      <div className="des">兄弟塔 ver1.1</div>
       {hero.name && hero.name !== "lee" && (
         <div className="titleCon">
           <div className="title">確定要要選擇 {showName(hero.name)}?</div>
