@@ -1,4 +1,4 @@
-.start-container2 {
+.start-container3 {
   position: relative;
   color: white;
   margin: auto;
@@ -34,76 +34,107 @@
     animation: ARgan 0.3s infinite linear;
   }
 
-  .sta {
+  .bird {
     position: absolute;
     height: 50px;
     width: 50px;
-    background-image: url("../../image/500.0");
+    background-image: url("../../image/bird.0");
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
   }
 
-  .yang {
+  .butt {
     position: absolute;
     height: 50px;
     width: 50px;
-    background-image: url("../../image/yang.0");
+    background-image: url("../../image/butterfly.0");
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
   }
 
-  .limi {
+  .mao {
     position: absolute;
     height: 50px;
     width: 50px;
-    background-image: url("../../image/limi.0");
+    background-image: url("../../image/mao.0");
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
   }
 
-  .limicry {
+  .nai {
     position: absolute;
     height: 50px;
     width: 50px;
-    background-image: url("../../image/limicry.0");
-    background-size: 50px 50px;
-    animation: SMORC 1s infinite linear;
-  }
-  .tea {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    background-image: url("../../image/ar.0");
-    background-size: 50px 50px;
-  }
-
-  .jail {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    background-image: url("../../image/jail.0");
-    background-size: 50px 50px;
-  }
-
-  .oan {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    background-image: url("../../image/oan.0");
+    background-image: url("../../image/nai.0");
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
   }
 
-  .ticket {
+  .chick {
     position: absolute;
     height: 50px;
     width: 50px;
-    background-image: url("../../image/ticket.0");
+    background-image: url("../../image/chick.0");
     background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .ET {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/ET.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .da {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/da.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .do {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/do.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .lin {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/lin.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .samfu {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/samfu.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .fu {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/fu.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
   }
 }
 
-.backTo1 {
+.backTo2 {
   position: absolute;
   height: 50px;
   width: 50px;
@@ -111,7 +142,7 @@
   background-size: 50px 50px;
 }
 
-.nextTo3 {
+.nextTo4 {
   position: absolute;
   height: 50px;
   width: 50px;
@@ -124,14 +155,6 @@
   height: 50px;
   width: 50px;
   background-color: #845332;
-}
-
-.next {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  background: url("../../image/twitch.0");
-  background-size: 50px 50px;
 }
 
 @keyframes RBgan {

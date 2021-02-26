@@ -7,4 +7,6 @@ export type Hero = {
   name: string;
   des: string;
   money: number;
+  key?: number;
+  end?: boolean;
 };

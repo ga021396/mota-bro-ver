@@ -3,7 +3,7 @@ export const w = {
   name: "wall",
 };
 
-export const n = {
+export const n2 = {
   exists: 1,
   name: "next",
 };
@@ -34,7 +34,7 @@ export const F = {
 };
 
 export const initMap = [
-  [n, S, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [n2, S, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [w, w, w, w, w, w, w, w, w, w, 0],
   [0, 0, 0, w, 0, w, K, 0, F, w, 0],
   [F, 0, S, 0, 0, w, 0, 0, 0, w, 0],
@@ -47,16 +47,269 @@ export const initMap = [
   [A, 0, 0, w, 0, 0, 0, w, F, 0, M],
 ];
 
+const b1 = {
+  exists: 1,
+  name: "backTo1",
+};
+
+const n3 = {
+  exists: 1,
+  name: "nextTo3",
+};
+
+const y = {
+  exists: 2,
+  name: "yang",
+};
+
+const mi = {
+  exists: 3,
+  name: "limi",
+};
+
+const t = {
+  exists: 1,
+  name: "tea",
+};
+
+const j = {
+  exists: 1,
+  name: "jail",
+};
+
+const o = {
+  exists: 2,
+  name: "oan",
+};
+
+const te = {
+  exists: 2,
+  name: "ticket",
+};
+
 export const initMap2 = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, w, w, 0, 0, 0, 0, 0, w, w],
+  [b1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, w, w, 0, 0, y, 0, 0, w, w],
   [0, w, w, w, w, w, 0, w, w, w, w],
-  [0, w, 0, 0, w, 0, 0, 0, w, 0, 0],
-  [0, w, 0, 0, w, 0, 0, 0, w, 0, 0],
+  [0, w, mi, 0, w, 0, 0, 0, w, 0, t],
+  [0, w, 0, 0, 0, 0, 0, 0, j, 0, 0],
+  [0, w, w, w, w, 0, 0, 0, w, w, w],
+  [0, w, F, F, w, 0, 0, 0, w, F, F],
+  [0, w, F, F, 0, 0, 0, 0, 0, F, F],
   [0, w, w, w, w, 0, 0, 0, w, w, w],
   [0, w, 0, 0, w, 0, 0, 0, w, 0, 0],
-  [0, w, 0, 0, w, 0, 0, 0, w, 0, 0],
-  [0, w, w, w, w, 0, 0, 0, w, w, w],
-  [0, w, 0, 0, w, 0, 0, 0, w, 0, 0],
-  [0, w, 0, 0, w, 0, 0, 0, w, 0, 0],
+  [n3, w, o, 0, 0, 0, 0, 0, 0, 0, te],
+];
+
+const b2 = {
+  exists: 1,
+  name: "backTo2",
+};
+
+const n4 = {
+  exists: 1,
+  name: "nextTo4",
+};
+
+const b = {
+  exists: 1,
+  name: "bird",
+};
+
+const bu = {
+  exists: 2,
+  name: "butt",
+};
+
+const ma = {
+  exists: 1,
+  name: "mao",
+};
+
+const na = {
+  exists: 2,
+  name: "nai",
+};
+
+const ch = {
+  exists: 1,
+  name: "chick",
+};
+
+const ET = {
+  exists: 3,
+  name: "ET",
+};
+
+const da = {
+  exists: 2,
+  name: "da",
+};
+
+const fu = {
+  exists: 2,
+  name: "samfu",
+};
+
+const li = {
+  exists: 2,
+  name: "lin",
+};
+
+const d = {
+  exists: 2,
+  name: "do",
+};
+
+export const initMap3Sam = [
+  [b2, w, w, w, 0, w, w, w, 0, 0, n4],
+  [0, w, 0, 0, b, w, 0, w, 0, 0, 0],
+  [0, w, w, w, 0, w, w, w, 0, 0, 0],
+  [0, b, da, w, b, 0, na, w, 0, 0, 0],
+  [0, w, w, w, 0, w, w, w, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, b, 0, 0, 0],
+  [0, 0, 0, 0, w, w, w, 0, w, w, w],
+  [0, 0, 0, b, 0, 0, w, 0, w, 0, w],
+  [b, b, b, 0, w, w, w, 0, w, 0, w],
+  [b, b, b, 0, w, bu, 0, b, w, 0, w],
+  [ET, b, b, 0, w, w, w, 0, w, w, w],
+];
+
+export const initMap3Arwei = [
+  [b2, w, b, b, ma, b, b, w, w, w, n4],
+  [0, w, 0, b, b, b, 0, b, da, w, 0],
+  [0, w, 0, b, b, b, 0, b, 0, w, 0],
+  [0, w, 0, 0, 0, 0, 0, w, w, w, 0],
+  [0, w, 0, w, w, w, 0, w, 0, b, 0],
+  [0, w, 0, w, 0, b, 0, w, fu, b, 0],
+  [0, w, 0, w, li, b, 0, w, w, w, 0],
+  [0, 0, 0, w, w, w, 0, 0, 0, 0, 0],
+  [0, 0, 0, w, 0, w, 0, 0, 0, 0, 0],
+  [0, 0, 0, w, 0, w, 0, 0, 0, 0, 0],
+  [0, 0, 0, w, w, w, 0, 0, 0, 0, 0],
+];
+
+export const initMap3Rb = [
+  [b2, w, 0, b, b, d, w, 0, 0, 0, n4],
+  [0, w, 0, b, b, b, w, 0, 0, 0, 0],
+  [0, w, 0, b, b, b, w, 0, 0, 0, 0],
+  [0, w, 0, 0, 0, 0, w, 0, 0, 0, 0],
+  [0, w, 0, 0, 0, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, w, w, w, 0, 0, 0, w, w, w],
+  [0, 0, b, ch, w, 0, 0, 0, b, fu, w],
+  [0, 0, w, w, w, 0, 0, 0, w, w, w],
+  [0, 0, w, da, b, 0, 0, 0, w, 0, 0],
+  [0, 0, w, w, w, 0, 0, 0, w, w, w],
+];
+
+const b3 = {
+  exists: 1,
+  name: "backTo3",
+};
+
+const n5 = {
+  exists: 1,
+  name: "nextTo5",
+};
+
+const nl = {
+  exists: 3,
+  name: "nl",
+};
+
+export const initMap4 = [
+  [b, b, b, b, w, n5, w, b, b, b, b],
+  [b, b, b, b, w, 0, w, b, b, b, b],
+  [b, b, b, b, w, 0, w, b, b, b, b],
+  [b, b, b, b, w, nl, w, b, b, b, b],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+  [S, S, S, S, w, b3, w, S, S, S, S],
+];
+
+const ni = {
+  exists: 3,
+  name: "ani",
+};
+
+const ap = {
+  exists: 2,
+  name: "apple",
+};
+
+const x = {
+  exists: 1,
+  name: "xio8",
+};
+
+const ds = {
+  exists: 1,
+  name: "ds3",
+};
+
+const k = {
+  exists: 1,
+  name: "key",
+};
+
+const dr = {
+  exists: 1,
+  name: "door",
+};
+
+const ka = {
+  exists: 3,
+  name: "kamoi",
+};
+
+const sn = {
+  exists: 3,
+  name: "snow",
+};
+
+export const initMap5Sam = [
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [ka, 0, 0, dr, 0, 0, 0, dr, 0, 0, sn],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, k, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5Rb = [
+  [w, w, w, w, 0, ni, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, ap, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5Arwei = [
+  [w, w, w, w, 0, x, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, ds, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
 ];

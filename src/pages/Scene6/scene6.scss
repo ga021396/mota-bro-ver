@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+.happy-end {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 100%;
+  width: 100vw;
+  height: 100vh;
+  animation: happy 4s 2s linear;
+  animation-fill-mode: forwards;
+  font-family: "DotGothic16", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .end {
+    opacity: 0;
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    animation: showText 4s 6s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+.bad-end {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 100%;
+  width: 100vw;
+  height: 100vh;
+  animation: bad 4s 2s linear;
+  animation-fill-mode: forwards;
+  font-family: "DotGothic16", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .end {
+    opacity: 0;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    animation: showText 4s 6s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes happy {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes bad {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -13,3 +13,18 @@ export const getScene2 = createSelector(
   getState,
   (state: countState) => state.item2
 );
+
+export const getScene3 = createSelector(
+  getState,
+  (state: countState) => state.item3
+);
+
+export const getScene4 = createSelector(
+  getState,
+  (state: countState) => state.item4
+);
+
+export const getScene5 = createSelector(
+  getState,
+  (state: countState) => state.item5
+);

@@ -13,7 +13,8 @@ function Sidebar({ stage }: any) {
       case "sam":
         return "Sam";
       case "rb":
-        return "R．B";
+        if (stage === 6 && !hero.end) return "R．";
+        else return "R．B";
       case "arwei":
         return "AR．Wei";
       case "lee":
@@ -43,7 +44,8 @@ function Sidebar({ stage }: any) {
 
   return (
     <div className="sidebar-container">
-      <div>第 {stage} 層</div>
+      {stage !== 4 ? <div>第 {stage} 層</div> : <div>長廊</div>}
+
       <div>名稱 : {showName(hero.name)}</div>
       <div>
         <span>
