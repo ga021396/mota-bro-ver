@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mota-bro-ver/static/css/main.35307820.chunk.css",
-    "main.js": "/mota-bro-ver/static/js/main.e1026f6f.chunk.js",
-    "main.js.map": "/mota-bro-ver/static/js/main.e1026f6f.chunk.js.map",
+    "main.css": "/mota-bro-ver/static/css/main.7726c07d.chunk.css",
+    "main.js": "/mota-bro-ver/static/js/main.20aaf815.chunk.js",
+    "main.js.map": "/mota-bro-ver/static/js/main.20aaf815.chunk.js.map",
     "runtime-main.js": "/mota-bro-ver/static/js/runtime-main.734b0331.js",
     "runtime-main.js.map": "/mota-bro-ver/static/js/runtime-main.734b0331.js.map",
     "static/js/2.adeef8de.chunk.js": "/mota-bro-ver/static/js/2.adeef8de.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.0b612b6a.chunk.js": "/mota-bro-ver/static/js/3.0b612b6a.chunk.js",
     "static/js/3.0b612b6a.chunk.js.map": "/mota-bro-ver/static/js/3.0b612b6a.chunk.js.map",
     "index.html": "/mota-bro-ver/index.html",
-    "static/css/main.35307820.chunk.css.map": "/mota-bro-ver/static/css/main.35307820.chunk.css.map",
+    "static/css/main.7726c07d.chunk.css.map": "/mota-bro-ver/static/css/main.7726c07d.chunk.css.map",
     "static/js/2.adeef8de.chunk.js.LICENSE.txt": "/mota-bro-ver/static/js/2.adeef8de.chunk.js.LICENSE.txt",
     "static/media/scene2.scss": "/mota-bro-ver/static/media/yang.e7abe3e4.0",
     "static/media/scene3.scss": "/mota-bro-ver/static/media/samfu.29905af0.0",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.734b0331.js",
     "static/js/2.adeef8de.chunk.js",
-    "static/css/main.35307820.chunk.css",
-    "static/js/main.e1026f6f.chunk.js"
+    "static/css/main.7726c07d.chunk.css",
+    "static/js/main.20aaf815.chunk.js"
   ]
 }
