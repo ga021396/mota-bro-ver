@@ -78,6 +78,15 @@
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
   }
+
+  .butt {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
+    animation: Buttgan 0.3s infinite linear;
+  }
 }
 
 .wall {
@@ -145,6 +154,21 @@
   }
   100% {
     background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes Buttgan {
+  0% {
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background-image: url("../../image/buttRight.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background-image: url("../../image/buttLeft.0");
     background-size: 50px 50px;
   }
 }

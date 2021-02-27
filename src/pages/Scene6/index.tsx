@@ -34,6 +34,12 @@ function Scene6() {
 
       case "lee":
         return "https://www.youtube.com/watch?v=JDTK8IfJ0q4";
+
+      case "butt":
+        return "https://www.youtube.com/watch?v=-VvjY_GYHa4";
+
+      case "buttAgo":
+        return "https://www.youtube.com/watch?v=ZtVrju_QeHs";
     }
   };
 

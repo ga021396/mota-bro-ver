@@ -10,4 +10,5 @@ export type Hero = {
   key?: number;
   end?: boolean;
   hiddenEnd?: boolean;
+  letter?: number;
 };

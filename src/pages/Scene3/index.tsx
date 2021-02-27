@@ -11,6 +11,8 @@ import {
   initMap3Sam,
   initMap3Arwei,
   initMap3Rb,
+  initMap3Lee,
+  initMap3Butt,
 } from "../../store/scene1/data";
 
 function Scene3() {
@@ -23,13 +25,16 @@ function Scene3() {
     if (scene3.length <= 0) {
       switch (hero.name) {
         case "lee":
-          dispatch(fetchScene3(initMap3Sam as Map));
+          dispatch(fetchScene3(initMap3Lee as Map));
           return;
         case "sam":
           dispatch(fetchScene3(initMap3Sam as Map));
           return;
         case "arwei":
           dispatch(fetchScene3(initMap3Arwei as Map));
+          return;
+        case "butt":
+          dispatch(fetchScene3(initMap3Butt as Map));
           return;
         case "rb":
           dispatch(fetchScene3(initMap3Rb as Map));

@@ -43,6 +43,15 @@
     animation: SMORC 1s infinite linear;
   }
 
+  .butt {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
+    animation: Buttgan 0.3s infinite linear;
+  }
+
   .yang {
     position: absolute;
     height: 50px;

@@ -97,6 +97,22 @@
     animation: ARgan 0.3s infinite linear;
   }
 
+  .butt {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
+    margin-top: 8px;
+    cursor: pointer;
+    &:hover {
+      animation: Buttgan 0.3s infinite linear;
+    }
+  }
+  .buttSelected {
+    animation: Buttgan 0.3s infinite linear;
+  }
+
   .lee {
     position: relative;
     height: 50px;
@@ -166,6 +182,21 @@
   }
   100% {
     border: 1px solid white;
+  }
+}
+
+@keyframes Buttgan {
+  0% {
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
+  }
+  50% {
+    background-image: url("../../image/buttRight.0");
+    background-size: 50px 50px;
+  }
+  100% {
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
   }
 }
 

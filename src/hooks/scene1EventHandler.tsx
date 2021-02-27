@@ -107,6 +107,37 @@ const Scene1EventHandler = (map: Map) => {
     }
 
     // kamoi
+    if (getName() === "sam-bu") {
+      if (hero.hp !== 7414) {
+        if (getExists() === 3) {
+          dispatch(fetchMessage("哈哈，沒想到我爬得上來吧小蝶!"));
+          step();
+        } else if (getExists() === 2) {
+          dispatch(fetchMessage("情緒勒索情緒勒索情緒勒索。"));
+          step();
+        } else if (getExists() === 1) {
+          dispatch(
+            fetchMessage("你被迫跟阿盛雙排，慢慢演變成新一代屁眼女俠。")
+          );
+          dispatch(fetchCount(6));
+        }
+      } else {
+        if (getExists() === 3) {
+          dispatch(fetchMessage("蝴蝶兒~"));
+          step();
+        } else if (getExists() === 2) {
+          dispatch(fetchMessage("我好想跟你生小孩啊~蝴蝶兒~"));
+          step();
+        } else if (getExists() === 1) {
+          dispatch(fetchMessage("你覺得這個人怪怪的，決定遠離。"));
+          dispatch(fetchCount(6));
+          dispatch(fetch({ ...hero, end: true, name: "buttAgo" }));
+          step();
+        }
+      }
+    }
+
+    // kamoi
     if (getName() === "kamoi") {
       if (hero.hp > 5920) {
         if (getExists() === 3) {
@@ -134,6 +165,43 @@ const Scene1EventHandler = (map: Map) => {
       }
     }
 
+    // bo
+    if (getName() === "bo") {
+      if (getExists() === 2) {
+        dispatch(fetchMessage("能幫我追阿蛋嗎?"));
+        step();
+      } else if (getExists() === 1) {
+        dispatch(fetchMessage("得到了小波的信。"));
+        dispatch(fetch({ ...hero, letter: 1 }));
+        step();
+      }
+    }
+
+    // orange
+    if (getName() === "orange") {
+      if (getExists() === 2) {
+        dispatch(fetchMessage("媽咪別來，我不想剪指甲了。"));
+        step();
+      } else if (getExists() === 1) {
+        dispatch(fetchMessage("橘子逃走了。"));
+        step();
+      }
+    }
+
+    //feng
+    if (getName() === "feng") {
+      if (getExists() === 3) {
+        dispatch(fetchMessage("你的貼圖超好用，我訂閱多了一堆，爽阿刺阿!"));
+        step();
+      } else if (getExists() === 2) {
+        dispatch(fetchMessage("你內心受傷，HP扣1000。"));
+        dispatch(fetch({ ...hero, hp: hero.hp - 1000 }));
+        step();
+      } else {
+        dispatch(fetchMessage("什麼時候有新素材?"));
+      }
+    }
+
     //door
     if (getName() === "door") {
       if (hero?.key) {
@@ -147,12 +215,18 @@ const Scene1EventHandler = (map: Map) => {
 
     // key
     if (getName() === "key") {
-      if (hero.hp >= 5920) {
+      if (hero.name === "butt") {
         dispatch(fetchMessage("撿到了一把鑰匙。"));
         dispatch(fetch({ ...hero, key: 1 }));
         step();
       } else {
-        dispatch(fetchMessage("太重了，拿不動。"));
+        if (hero.hp >= 5920) {
+          dispatch(fetchMessage("撿到了一把鑰匙。"));
+          dispatch(fetch({ ...hero, key: 1 }));
+          step();
+        } else {
+          dispatch(fetchMessage("太重了，拿不動。"));
+        }
       }
     }
 
@@ -216,20 +290,34 @@ const Scene1EventHandler = (map: Map) => {
 
     // nl
     if (getName() === "nl") {
-      if (getExists() === 3) {
-        step();
-        dispatch(fetchMessage("前面就是最後了，進去後就沒辦法回頭。"));
-      } else if (getExists() === 2) {
-        step();
-        dispatch(
-          fetchMessage(
-            "謹慎分配能力值，破關的線索就在地圖裡，相信你可以做到的。"
-          )
-        );
+      if (hero.name === "butt") {
+        if (getExists() === 3) {
+          step();
+          dispatch(fetchMessage("你也到達這裡了嗎，副班長。"));
+        } else if (getExists() === 2) {
+          step();
+          dispatch(fetchMessage("放飛自我，不必在意他人眼光，加油!"));
+        } else {
+          step();
+          dispatch(fetchMessage("獲得班長的激勵，得到50000元。"));
+          dispatch(fetch({ ...hero, money: hero.money + 50000 }));
+        }
       } else {
-        step();
-        dispatch(fetchMessage("獲得班長的贈禮，得到50000元。"));
-        dispatch(fetch({ ...hero, money: hero.money + 50000 }));
+        if (getExists() === 3) {
+          step();
+          dispatch(fetchMessage("前面就是最後了，進去後就沒辦法回頭。"));
+        } else if (getExists() === 2) {
+          step();
+          dispatch(
+            fetchMessage(
+              "謹慎分配能力值，破關的線索就在地圖裡，相信你可以做到的。"
+            )
+          );
+        } else {
+          step();
+          dispatch(fetchMessage("獲得班長的贈禮，得到50000元。"));
+          dispatch(fetch({ ...hero, money: hero.money + 50000 }));
+        }
       }
     }
 
@@ -344,7 +432,7 @@ const Scene1EventHandler = (map: Map) => {
     }
 
     // butt
-    if (getName() === "butt") {
+    if (getName() === "but") {
       if (hero.hp === 520) {
         if (getExists() === 4) {
           dispatch(fetchMessage("我好想去ME阿!"));
@@ -401,6 +489,8 @@ const Scene1EventHandler = (map: Map) => {
           dispatch(fetchMessage("歐安親了你一口。"));
         } else if (hero.name === "rb") {
           dispatch(fetchMessage("等我呦，下禮拜上台北去你家~"));
+        } else if (hero.name === "butt") {
+          dispatch(fetchMessage("妳也想加入JKF女郎嗎?"));
         } else {
           dispatch(fetchMessage("我不認識你。"));
         }
@@ -420,6 +510,9 @@ const Scene1EventHandler = (map: Map) => {
           step();
           dispatch(fetchMessage("你私下給了對方一萬塊和解。"));
           dispatch(fetch({ ...hero, money: hero.money - 10000 }));
+        } else if (hero.name === "butt") {
+          step();
+          dispatch(fetchMessage("妳大罵一聲7417，對方嚇到撤告了。"));
         } else {
           step();
           dispatch(fetchMessage("對方看到你的臉，決定撤告。"));
@@ -429,9 +522,14 @@ const Scene1EventHandler = (map: Map) => {
 
     // tea
     if (getName() === "tea") {
-      step();
-      dispatch(fetchMessage("喝了一口冬瓜露，提升2點防禦。"));
-      dispatch(fetch({ ...hero, def: hero.def + 2 }));
+      if (hero.name === "butt") {
+        step();
+        dispatch(fetchMessage("阿緯~~~~阿緯~~~~~~"));
+      } else {
+        step();
+        dispatch(fetchMessage("喝了一口冬瓜露，提升2點防禦。"));
+        dispatch(fetch({ ...hero, def: hero.def + 2 }));
+      }
     }
 
     // jail
@@ -439,6 +537,10 @@ const Scene1EventHandler = (map: Map) => {
       if (hero.name === "arwei") {
         step();
         dispatch(fetchMessage("下面似乎有條縫隙。"));
+      }
+      if (hero.key) {
+        step();
+        dispatch(fetchMessage("門打開了。"));
       } else {
         dispatch(fetchMessage("似乎沒辦法穿過這面柵欄。"));
       }
@@ -488,7 +590,7 @@ const Scene1EventHandler = (map: Map) => {
           }
         }
       } else {
-        dispatch(fetchMessage("小子，等唱得贏我來在吧。"));
+        dispatch(fetchMessage("小子，等唱得贏我再來吧。"));
       }
     }
 
@@ -530,6 +632,12 @@ const Scene1EventHandler = (map: Map) => {
 
     // 獸人
     if (getName() === "smorc") {
+      if (hero.name === "butt") {
+        step();
+        dispatch(fetchMessage("獸人為猶長夫人獻上1000元。"));
+        dispatch(fetch({ ...hero, money: hero.money + 1000 }));
+        return;
+      }
       if (hero.hp > 20) {
         step();
         dispatch(fetchMessage("你打倒了獸人，受到20點傷害，獲得1000金幣。"));
@@ -565,20 +673,38 @@ const Scene1EventHandler = (map: Map) => {
 
     // ｍｍｄ
     if (getName() === "mmd") {
-      if (getExists() === 3) {
+      if (getExists() === 4) {
         dispatch(fetchMessage("都馬我來扛。"));
         step();
-      } else if (getExists() === 2) {
+      } else if (getExists() === 3) {
         dispatch(fetchMessage("獲得咪咪守護，防禦力加20。"));
         dispatch(fetch({ ...hero, def: hero.def + 20 }));
         step();
       } else {
-        dispatch(fetchMessage("O我的天。"));
+        if (hero.letter) {
+          if (getExists() === 2) {
+            dispatch(fetchMessage("我的信?讓我瞧瞧。"));
+            step();
+          } else if (getExists() === 1) {
+            dispatch(fetchMessage("我知道了。謝謝你。"));
+            step();
+          }
+        } else {
+          dispatch(fetchMessage("O我的天。"));
+        }
       }
     }
 
     // 500
     if (getName() === "sta") {
+      if (hero.name === "butt") {
+        step();
+        dispatch(
+          fetchMessage("哭阿!史黑衝鋒隊長不配獲得５００的幫助，被扣了100點血。")
+        );
+        dispatch(fetch({ ...hero, hp: hero.hp - 100 }));
+        return;
+      }
       step();
       dispatch(fetchMessage("５００大軍幫你助陣，獲得了1000金幣。"));
       dispatch(fetch({ ...hero, money: hero.money + 1000 }));
@@ -586,7 +712,18 @@ const Scene1EventHandler = (map: Map) => {
 
     // K7
     if (getName() === "k7") {
-      if (hero.name === "sam") {
+      if (hero.name === "butt") {
+        if (getExists() === 2) {
+          step();
+          dispatch(fetchMessage("ｋ７幫你發了工商文，得到3000塊。"));
+          dispatch(fetch({ ...hero, money: hero.money + 3000 }));
+        } else if (getExists() === 3) {
+          step();
+          dispatch(fetchMessage("今天有工商喔，別忘了。"));
+        } else {
+          dispatch(fetchMessage("要幫你拿外送嗎?"));
+        }
+      } else if (hero.name === "sam") {
         if (getExists() === 2) {
           step();
           dispatch(fetchMessage("ｋ７贊助了你3000元。"));

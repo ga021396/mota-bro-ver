@@ -43,13 +43,22 @@
     animation: SMORC 1s infinite linear;
   }
 
-  .butt {
+  .but {
     position: absolute;
     height: 50px;
     width: 50px;
     background-image: url("../../image/butterfly.0");
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
+  }
+
+  .butt {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/buttLeft.0");
+    background-size: 50px 50px;
+    animation: Buttgan 0.3s infinite linear;
   }
 
   .mao {
@@ -131,6 +140,49 @@
     background-image: url("../../image/fu.0");
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
+  }
+
+  .orange {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/orange.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .feng {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/feng.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .bo {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/bo.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .door {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/jail.0");
+    background-size: 50px 50px;
+  }
+
+  .key {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/key.png");
+    background-size: 50px 50px;
   }
 }
 

@@ -19,6 +19,10 @@ function Sidebar({ stage }: any) {
         return "AR．Wei";
       case "lee":
         return "Lee．Lock1ng";
+      case "butt":
+        return "陳霓媗";
+      case "buttAgo":
+        return "陳柏禎";
     }
   };
 

@@ -14,6 +14,7 @@ import {
   initMap5RbHid,
   initMap5SamHid,
   initMap5Lee,
+  initMap5Butt,
 } from "../../store/scene1/data";
 
 function Scene5() {
@@ -40,6 +41,9 @@ function Scene5() {
           return;
         case "lee":
           dispatch(fetchScene5(initMap5Lee as Map));
+          return;
+        case "butt":
+          dispatch(fetchScene5(initMap5Butt as Map));
           return;
       }
     }

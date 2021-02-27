@@ -24,7 +24,7 @@ export const K = {
 };
 
 export const M = {
-  exists: 3,
+  exists: 4,
   name: "mmd",
 };
 
@@ -118,7 +118,7 @@ const b = {
 
 const bu = {
   exists: 4,
-  name: "butt",
+  name: "but",
 };
 
 const ma = {
@@ -175,6 +175,20 @@ export const initMap3Sam = [
   [ET, b, b, 0, w, w, w, 0, w, w, w],
 ];
 
+export const initMap3Lee = [
+  [b2, w, w, w, 0, w, w, w, 0, 0, n4],
+  [0, w, 0, 0, b, w, 0, w, 0, 0, 0],
+  [0, w, w, w, 0, w, w, w, 0, 0, 0],
+  [0, b, da, w, b, 0, 0, w, 0, 0, 0],
+  [0, w, w, w, 0, w, w, w, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, b, 0, 0, 0],
+  [0, 0, 0, 0, w, w, w, 0, w, w, w],
+  [0, 0, 0, b, 0, 0, w, 0, w, 0, w],
+  [b, b, b, 0, w, w, w, 0, w, 0, w],
+  [b, b, b, 0, w, bu, 0, b, w, 0, w],
+  [ET, b, b, 0, w, w, w, 0, w, w, w],
+];
+
 export const initMap3Arwei = [
   [b2, w, b, b, ma, b, b, w, w, w, n4],
   [0, w, 0, b, b, b, 0, b, da, w, 0],
@@ -201,6 +215,45 @@ export const initMap3Rb = [
   [0, 0, w, w, w, 0, 0, 0, w, w, w],
   [0, 0, w, da, b, 0, 0, 0, w, 0, 0],
   [0, 0, w, w, w, 0, 0, 0, w, w, w],
+];
+
+const k = {
+  exists: 1,
+  name: "key",
+};
+
+const dr = {
+  exists: 1,
+  name: "door",
+};
+
+const or = {
+  exists: 2,
+  name: "orange",
+};
+
+const f = {
+  exists: 3,
+  name: "feng",
+};
+
+const bo = {
+  exists: 2,
+  name: "bo",
+};
+
+export const initMap3Butt = [
+  [b2, 0, 0, 0, w, 0, dr, 0, 0, 0, n4],
+  [0, 0, 0, 0, w, or, w, 0, 0, 0, 0],
+  [w, w, w, 0, w, w, w, w, 0, 0, 0],
+  [k, b, w, 0, 0, 0, w, 0, 0, 0, 0],
+  [b, b, w, 0, 0, b, w, 0, 0, 0, 0],
+  [0, 0, w, 0, w, 0, 0, 0, 0, 0, 0],
+  [0, 0, w, 0, w, 0, 0, w, 0, w, 0],
+  [0, 0, w, 0, w, 0, 0, w, 0, w, 0],
+  [0, 0, 0, b, w, 0, 0, w, w, w, w],
+  [0, 0, 0, 0, w, 0, 0, b, 0, w, bo],
+  [f, 0, 0, 0, w, 0, 0, b, 0, dr, 0],
 ];
 
 const b3 = {
@@ -250,16 +303,6 @@ const x = {
 const ds = {
   exists: 1,
   name: "ds3",
-};
-
-const k = {
-  exists: 1,
-  name: "key",
-};
-
-const dr = {
-  exists: 1,
-  name: "door",
 };
 
 const ka = {
@@ -349,6 +392,25 @@ const n6 = {
 
 export const initMap5Lee = [
   [w, w, w, w, 0, n6, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+const sa = {
+  exists: 3,
+  name: "sam-bu",
+};
+
+export const initMap5Butt = [
+  [w, w, w, w, 0, sa, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, w, 0, w, w, w, w, w],

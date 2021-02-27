@@ -49,6 +49,17 @@ const LEE = {
   money: 0,
 };
 
+const BUTT = {
+  x: 5,
+  y: 10,
+  atk: 10,
+  def: 10,
+  hp: 11114,
+  name: "butt",
+  des: "陳霓媗是新一代屁眼女俠，實況風格粗魯下流，又稱副班長、猶長夫人。",
+  money: 0,
+};
+
 function Opening({ next, exp }: any) {
   const dispatch = useDispatch();
   const hero = useSelector(getHero) as Hero;
@@ -66,6 +77,9 @@ function Opening({ next, exp }: any) {
         return;
       case "lee":
         dispatch(fetch(LEE));
+        return;
+      case "butt":
+        dispatch(fetch(BUTT));
         return;
       default:
         dispatch(
@@ -94,6 +108,8 @@ function Opening({ next, exp }: any) {
         return "AR．Wei";
       case "lee":
         return "Lee．Lock1ng";
+      case "butt":
+        return "陳霓媗";
     }
   };
 
@@ -106,7 +122,7 @@ function Opening({ next, exp }: any) {
 
   return (
     <div className="scene-container">
-      <div className="des">兄弟塔 ver1.2</div>
+      <div className="des">兄弟塔 ver1.3</div>
       {hero.name && hero.name !== "lee" && (
         <div className="titleCon">
           <div className="title">確定要要選擇 {showName(hero.name)}?</div>
@@ -147,6 +163,13 @@ function Opening({ next, exp }: any) {
           <div
             className={hero?.name === "arwei" ? "arwei arSelected" : "arwei"}
             onClick={() => handleInitHero("arwei")}
+          ></div>
+        </div>
+
+        <div className="roleCon">
+          <div
+            className={hero?.name === "butt" ? "butt buttSelected" : "butt"}
+            onClick={() => handleInitHero("butt")}
           ></div>
         </div>
 
