@@ -1,8 +1,8 @@
 import "./opening.scss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getHero } from "../../store/hero/selectors";
 import { Hero } from "../../store/hero/type";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
 import { fetch } from "../../store/hero/action";
 
 const AR = {
@@ -38,9 +38,21 @@ const RB = {
   money: 0,
 };
 
+const LEE = {
+  x: 5,
+  y: 10,
+  atk: 0,
+  def: 0,
+  hp: 0,
+  name: "lee",
+  des: "",
+  money: 0,
+};
+
 function Opening({ next, exp }: any) {
   const dispatch = useDispatch();
   const hero = useSelector(getHero) as Hero;
+  const [password, setPassword] = useState("");
   const handleInitHero = (name: string) => {
     switch (name) {
       case "sam":
@@ -51,6 +63,9 @@ function Opening({ next, exp }: any) {
         return;
       case "arwei":
         dispatch(fetch(AR));
+        return;
+      case "lee":
+        dispatch(fetch(LEE));
         return;
       default:
         dispatch(
@@ -82,9 +97,16 @@ function Opening({ next, exp }: any) {
     }
   };
 
+  const getPassword = () => {
+    var result = new Date();
+    result.setDate(result.getDate() + 14);
+    const value = `${result.getMonth() + 1}${result.getDate()}`;
+    return value;
+  };
+
   return (
     <div className="scene-container">
-      <div className="des">兄弟塔 ver1.1</div>
+      <div className="des">兄弟塔 ver1.2</div>
       {hero.name && hero.name !== "lee" && (
         <div className="titleCon">
           <div className="title">確定要要選擇 {showName(hero.name)}?</div>
@@ -96,6 +118,13 @@ function Opening({ next, exp }: any) {
         <div className="titleCon">
           <div className="title">你目前無法選擇 {showName(hero.name)}。</div>
           <div>此角色將於{getDate()}解鎖。</div>
+          <div>輸入密碼提前體驗 :</div>
+          <input
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
         </div>
       )}
 
@@ -127,6 +156,11 @@ function Opening({ next, exp }: any) {
       </div>
       <div className="btnCon">
         {hero.name && hero.name !== "lee" && (
+          <button className="Btn" onClick={next}>
+            開始
+          </button>
+        )}
+        {hero.name === "lee" && password === getPassword() && (
           <button className="Btn" onClick={next}>
             開始
           </button>

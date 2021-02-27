@@ -341,3 +341,22 @@ export const initMap5Arwei = [
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
 ];
+
+const n6 = {
+  exists: 1,
+  name: "nextTo6",
+};
+
+export const initMap5Lee = [
+  [w, w, w, w, 0, n6, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];

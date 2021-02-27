@@ -13,6 +13,7 @@ import {
   initMap5Rb,
   initMap5RbHid,
   initMap5SamHid,
+  initMap5Lee,
 } from "../../store/scene1/data";
 
 function Scene5() {
@@ -36,6 +37,9 @@ function Scene5() {
           if (hero.hiddenEnd) {
             dispatch(fetchScene5(initMap5RbHid as Map));
           } else dispatch(fetchScene5(initMap5Rb as Map));
+          return;
+        case "lee":
+          dispatch(fetchScene5(initMap5Lee as Map));
           return;
       }
     }

@@ -11,7 +11,54 @@ const Scene1EventHandler = (map: Map) => {
   const dispatch = useDispatch();
   const hero = useSelector(getHero) as Hero;
 
+  const updateLeeMap = (y: number, x: number, map: Map) => {
+    console.log(hero);
+    const getName = () => {
+      return map?.[y]?.[x]?.name;
+    };
+    if (getName() === "next") {
+      dispatch(fetchCount(2));
+      dispatch(fetch({ ...hero, x: 0, y: 1 }));
+    }
+
+    if (getName() === "nextTo3") {
+      dispatch(fetchCount(3));
+      dispatch(fetch({ ...hero, x: 0, y: 1 }));
+    }
+
+    if (getName() === "backTo1") {
+      dispatch(fetchCount(1));
+      dispatch(fetch({ ...hero, x: 1, y: 0 }));
+    }
+
+    if (getName() === "nextTo4") {
+      dispatch(fetchCount(4));
+      dispatch(fetch({ ...hero, x: 5, y: 9 }));
+    }
+
+    if (getName() === "backTo2") {
+      dispatch(fetchCount(2));
+      dispatch(fetch({ ...hero, x: 0, y: 9 }));
+    }
+
+    if (getName() === "nextTo5") {
+      dispatch(fetchCount(5));
+      dispatch(fetch({ ...hero, x: 5, y: 9 }));
+    }
+
+    if (getName() === "backTo3") {
+      dispatch(fetchCount(3));
+      dispatch(fetch({ ...hero, x: 10, y: 1 }));
+    }
+
+    if (getName() === "nextTo6") {
+      dispatch(fetchCount(6));
+      dispatch(fetch({ ...hero, end: true }));
+    }
+  };
+
   const updateScene1 = (y: number, x: number, map: Map) => {
+    console.log(hero);
     const getExists = () => {
       return map?.[y]?.[x]?.exists;
     };
@@ -584,46 +631,74 @@ const Scene1EventHandler = (map: Map) => {
     (event) => {
       // top
       if (event.keyCode === 38 && hero.y > 0) {
-        dispatch(fetchMessage(""));
-        if (map?.[hero.y - 1]?.[hero.x]?.exists) {
-          updateScene1(hero.y - 1, hero.x, map);
+        if (hero.name === "lee") {
+          dispatch(fetch({ ...hero, y: hero.y - 1 }));
+          updateLeeMap(hero.y - 1, hero.x, map);
+
+          return;
+        } else {
+          dispatch(fetchMessage(""));
+          if (map?.[hero.y - 1]?.[hero.x]?.exists) {
+            updateScene1(hero.y - 1, hero.x, map);
+            return;
+          }
+          dispatch(fetch({ ...hero, y: hero.y - 1 }));
           return;
         }
-        dispatch(fetch({ ...hero, y: hero.y - 1 }));
-        return;
       }
 
       // buttom
       if (event.keyCode === 40 && hero.y < 10) {
-        dispatch(fetchMessage(""));
-        if (map?.[hero.y + 1]?.[hero.x]?.exists) {
-          updateScene1(hero.y + 1, hero.x, map);
+        if (hero.name === "lee") {
+          dispatch(fetch({ ...hero, y: hero.y + 1 }));
+          updateLeeMap(hero.y + 1, hero.x, map);
+
+          return;
+        } else {
+          dispatch(fetchMessage(""));
+          if (map?.[hero.y + 1]?.[hero.x]?.exists) {
+            updateScene1(hero.y + 1, hero.x, map);
+            return;
+          }
+          dispatch(fetch({ ...hero, y: hero.y + 1 }));
           return;
         }
-        dispatch(fetch({ ...hero, y: hero.y + 1 }));
-        return;
       }
 
       // left
       if (event.keyCode === 37 && hero.x > 0) {
-        dispatch(fetchMessage(""));
-        if (map?.[hero.y]?.[hero.x - 1]?.exists) {
-          updateScene1(hero.y, hero.x - 1, map);
+        if (hero.name === "lee") {
+          dispatch(fetch({ ...hero, x: hero.x - 1 }));
+          updateLeeMap(hero.y, hero.x - 1, map);
+
+          return;
+        } else {
+          dispatch(fetchMessage(""));
+          if (map?.[hero.y]?.[hero.x - 1]?.exists) {
+            updateScene1(hero.y, hero.x - 1, map);
+            return;
+          }
+          dispatch(fetch({ ...hero, x: hero.x - 1 }));
           return;
         }
-        dispatch(fetch({ ...hero, x: hero.x - 1 }));
-        return;
       }
 
       // right
       if (event.keyCode === 39 && hero.x < 10) {
-        dispatch(fetchMessage(""));
-        if (map?.[hero.y]?.[hero.x + 1]?.exists) {
-          updateScene1(hero.y, hero.x + 1, map);
+        if (hero.name === "lee") {
+          dispatch(fetch({ ...hero, x: hero.x + 1 }));
+          updateLeeMap(hero.y, hero.x + 1, map);
+
+          return;
+        } else {
+          dispatch(fetchMessage(""));
+          if (map?.[hero.y]?.[hero.x + 1]?.exists) {
+            updateScene1(hero.y, hero.x + 1, map);
+            return;
+          }
+          dispatch(fetch({ ...hero, x: hero.x + 1 }));
           return;
         }
-        dispatch(fetch({ ...hero, x: hero.x + 1 }));
-        return;
       }
     },
     [hero]

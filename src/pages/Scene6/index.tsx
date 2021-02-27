@@ -31,6 +31,9 @@ function Scene6() {
           if (hero.end) return "https://www.youtube.com/watch?v=coQye04gQ0Q";
           else return "https://www.youtube.com/watch?v=XprdTvnqVIg";
         }
+
+      case "lee":
+        return "https://www.youtube.com/watch?v=JDTK8IfJ0q4";
     }
   };
 
@@ -38,6 +41,8 @@ function Scene6() {
     <div className={hero.end ? "happy-end" : "bad-end"}>
       {timeLeft ? (
         <ReactPlayer url={getUrl()} />
+      ) : hero.name === "lee" ? (
+        <div className={"end"}>沒有人發現你。</div>
       ) : (
         <div className={"end"}>End</div>
       )}

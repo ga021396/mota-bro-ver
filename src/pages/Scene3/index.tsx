@@ -22,6 +22,9 @@ function Scene3() {
   useEffect(() => {
     if (scene3.length <= 0) {
       switch (hero.name) {
+        case "lee":
+          dispatch(fetchScene3(initMap3Sam as Map));
+          return;
         case "sam":
           dispatch(fetchScene3(initMap3Sam as Map));
           return;

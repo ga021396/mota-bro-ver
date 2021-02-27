@@ -33,6 +33,7 @@
     background-size: 50px 50px;
     animation: ARgan 0.3s infinite linear;
   }
+
   .smorc {
     position: absolute;
     height: 50px;
@@ -84,6 +85,15 @@
   height: 50px;
   width: 50px;
   background-color: #845332;
+}
+
+.lee {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url("../../image/lee.png");
+  background-size: 50px 50px;
+  animation: SMORC 1s infinite linear;
 }
 
 .next {
