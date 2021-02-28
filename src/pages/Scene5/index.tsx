@@ -16,6 +16,14 @@ import {
   initMap5Lee,
   initMap5Butt,
   initMap5ButtHid,
+  initMap5Locking,
+  initMap5LockingFull,
+  initMap5LockingRBwei,
+  initMap5LockingRBsam,
+  initMap5LockingSamWei,
+  initMap5LockingSam,
+  initMap5LockingWei,
+  initMap5LockingRB,
 } from "../../store/scene1/data";
 
 function Scene5() {
@@ -23,6 +31,14 @@ function Scene5() {
   const hero = useSelector(getHero) as Hero;
   const scene5 = useSelector(getScene5) as Map;
   Scene1EventHandler(scene5);
+
+  const full = hero?.save?.rb && hero?.save?.sam && hero?.save?.wei;
+  const samRb = hero?.save?.rb && hero?.save?.sam;
+  const samwei = hero?.save?.sam && hero?.save?.wei;
+  const rbWei = hero?.save?.rb && hero?.save?.wei;
+  const rb = hero?.save?.rb;
+  const wei = hero?.save?.wei;
+  const sam = hero?.save?.sam;
 
   useEffect(() => {
     if (scene5.length <= 0) {
@@ -48,6 +64,24 @@ function Scene5() {
             dispatch(fetchScene5(initMap5ButtHid as Map));
           } else dispatch(fetchScene5(initMap5Butt as Map));
           return;
+        case "lock1ng":
+          if (full) {
+            dispatch(fetchScene5(initMap5LockingFull as Map));
+          } else if (samRb) {
+            dispatch(fetchScene5(initMap5LockingRBsam as Map));
+          } else if (samwei) {
+            dispatch(fetchScene5(initMap5LockingSamWei as Map));
+          } else if (rbWei) {
+            dispatch(fetchScene5(initMap5LockingRBwei as Map));
+          } else if (rb) {
+            dispatch(fetchScene5(initMap5LockingRB as Map));
+          } else if (sam) {
+            dispatch(fetchScene5(initMap5LockingSam as Map));
+          } else if (wei) {
+            dispatch(fetchScene5(initMap5LockingWei as Map));
+          } else {
+            dispatch(fetchScene5(initMap5Locking as Map));
+          }
       }
     }
   }, []);

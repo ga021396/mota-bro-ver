@@ -59,7 +59,7 @@ const Scene1EventHandler = (map: Map) => {
 
     if (getName() === "fw") {
       dispatch(fetchCount(1));
-      dispatch(fetch({ ...hero, name: "lock1ng", hp: 10000, x: 5, y: 10 }));
+      dispatch(fetch({ ...hero, name: "lock1ng", hp: 0, x: 5, y: 10 }));
       dispatch(fetchScene3(initMapLocking3 as Map));
       fetchMessage("你獲得了LOL M冠軍，大家似乎對你有了印象。");
     }
@@ -176,6 +176,108 @@ const Scene1EventHandler = (map: Map) => {
       }
     }
 
+    // mon
+    if (getName() === "mon") {
+      if (getExists() === 1) {
+        dispatch(fetchMessage("他們似乎唱得很快樂。"));
+        stepUp();
+      } else if (getExists() === 2) {
+        dispatch(fetchMessage("隔著螢幕，看著兄弟幫的大家歡鬧嬉戲。"));
+        stepUp();
+      } else {
+        dispatch(fetchMessage("難道這就是最好的陣容嗎..."));
+        dispatch(fetchCount(6));
+        dispatch(fetch({ ...hero, end: true }));
+      }
+    }
+
+    // mic
+    if (getName() === "mic") {
+      if (!hero.save) {
+        if (getExists() === 1) {
+          dispatch(fetchMessage("星期六，你如約來到了KTV。"));
+          stepUp();
+        } else if (getExists() === 2) {
+          dispatch(fetchMessage("一如往常的開始RAP。"));
+          stepUp();
+        } else {
+          dispatch(fetchMessage("但似乎一個人都沒有..."));
+          dispatch(fetchCount(6));
+          dispatch(fetch({ ...hero, end: false }));
+        }
+      } else {
+        if (getExists() === 1) {
+          dispatch(fetchMessage("星期六，你如約來到了KTV。"));
+          stepUp();
+        } else if (getExists() === 2) {
+          dispatch(fetchMessage("一如往常的開始RAP。"));
+          stepUp();
+        } else {
+          dispatch(fetchMessage("但似乎缺少了什麼。"));
+          dispatch(fetchCount(6));
+          dispatch(fetch({ ...hero, end: false }));
+        }
+      }
+    }
+
+    // wei-l
+    if (getName() === "wei-l") {
+      if (getExists() === 3) {
+        dispatch(fetchMessage("嗨!禮拜六要載你嗎?"));
+        step();
+      } else if (getExists() === 2) {
+        dispatch(fetchMessage("要的話再打給我耶~"));
+        step();
+      } else {
+        dispatch(fetchMessage("阿緯先離開了。"));
+        step();
+        dispatch(fetch({ ...hero, save: { ...hero.save, wei: true } }));
+      }
+    }
+
+    // sam-l
+    if (getName() === "sam-l") {
+      if (getExists() === 3) {
+        dispatch(fetchMessage("康~哪次步是把你捧在手心上。"));
+        step();
+      } else if (getExists() === 2) {
+        dispatch(fetchMessage("禮拜六唱歌記得喔!"));
+        step();
+      } else {
+        dispatch(fetchMessage("家盛先離開了。"));
+        step();
+        dispatch(fetch({ ...hero, save: { ...hero.save, sam: true } }));
+      }
+    }
+
+    // rb-l
+    if (getName() === "rb-l") {
+      if (getExists() === 3) {
+        dispatch(fetchMessage("喔，作康阿!"));
+        step();
+      } else if (getExists() === 2) {
+        dispatch(fetchMessage("禮拜六記得別遲到喔!"));
+        step();
+      } else {
+        dispatch(fetchMessage("RB先一步離開了，不過掉了一張名片。"));
+        step();
+        dispatch(
+          fetch({ ...hero, auth: true, save: { ...hero.save, rb: true } })
+        );
+      }
+    }
+
+    // shan
+    if (getName() === "shan") {
+      if (getExists() === 2) {
+        dispatch(fetchMessage("你偷偷的拿走了湘湘的印章。"));
+        dispatch(fetch({ ...hero, letter: 1 }));
+        step();
+      } else if (getExists() === 1) {
+        dispatch(fetchMessage("湘湘沒看見你。"));
+      }
+    }
+
     // bo
     if (getName() === "bo") {
       if (getExists() === 2) {
@@ -217,7 +319,7 @@ const Scene1EventHandler = (map: Map) => {
     if (getName() === "door") {
       if (hero?.key) {
         dispatch(fetchMessage("門打開了。"));
-        dispatch(fetch({ ...hero, key: 0 }));
+        dispatch(fetch({ ...hero, key: hero?.key - 1 }));
         step();
       } else {
         dispatch(fetchMessage("沒有鑰匙了。"));
@@ -327,6 +429,18 @@ const Scene1EventHandler = (map: Map) => {
             dispatch(fetchMessage("獲得班長的激勵，得到50000元。"));
             dispatch(fetch({ ...hero, money: hero.money + 50000 }));
           }
+        }
+      } else if (hero.name === "lock1ng") {
+        if (getExists() === 3) {
+          step();
+          dispatch(fetchMessage("嗯...你是..."));
+        } else if (getExists() === 2) {
+          step();
+          dispatch(fetchMessage("阿算了想不起來，屁眼屁眼屁眼~"));
+        } else {
+          step();
+          dispatch(fetchMessage("班長丟下50000離開了。"));
+          dispatch(fetch({ ...hero, money: hero.money + 50000 }));
         }
       } else {
         if (getExists() === 3) {
@@ -517,6 +631,8 @@ const Scene1EventHandler = (map: Map) => {
           dispatch(fetchMessage("等我呦，下禮拜上台北去你家~"));
         } else if (hero.name === "butt") {
           dispatch(fetchMessage("妳也想加入JKF女郎嗎?"));
+        } else if (hero.name === "lock1ng") {
+          dispatch(fetchMessage("嗯...你是?"));
         } else {
           dispatch(fetchMessage("我不認識你。"));
         }
@@ -539,6 +655,9 @@ const Scene1EventHandler = (map: Map) => {
         } else if (hero.name === "butt") {
           step();
           dispatch(fetchMessage("妳大罵一聲7414，對方嚇到撤告了。"));
+        } else if (hero.name === "lock1ng") {
+          step();
+          dispatch(fetchMessage("對方一直聯繫不到你，無奈只撤告。"));
         } else {
           step();
           dispatch(fetchMessage("對方看到你的臉，決定撤告。"));
@@ -552,6 +671,11 @@ const Scene1EventHandler = (map: Map) => {
         step();
         dispatch(fetchMessage("阿緯~~~~阿緯~~~~~~"));
         dispatch(fetch({ ...hero, hp: hero.hp + 50000 }));
+      } else if (hero.name === "lock1ng") {
+        step();
+        dispatch(fetchMessage("你把冬瓜露的罐子擰成了兩根鐵絲。"));
+        dispatch(fetch({ ...hero, key: hero.key + 2 }));
+        return;
       } else {
         step();
         dispatch(fetchMessage("喝了一口冬瓜露，提升2點防禦。"));
@@ -568,6 +692,7 @@ const Scene1EventHandler = (map: Map) => {
       if (hero.key) {
         step();
         dispatch(fetchMessage("門打開了。"));
+        dispatch(fetch({ ...hero, key: hero.key - 1 }));
       } else {
         dispatch(fetchMessage("似乎沒辦法穿過這面柵欄。"));
       }
@@ -586,6 +711,8 @@ const Scene1EventHandler = (map: Map) => {
         } else {
           map[y][x] = { ...map[y][x], name: "limicry" };
         }
+      } else if (hero.name === "lock1ng") {
+        dispatch(fetchMessage("李米沒看見你。"));
       } else {
         dispatch(fetchMessage("我等的人不是你。"));
       }
@@ -602,6 +729,9 @@ const Scene1EventHandler = (map: Map) => {
           if (hero.name === "arwei") {
             step();
             dispatch(fetchMessage("幹!怎麼可以那麼難聽。"));
+          } else if (hero.name === "lock1ng") {
+            step();
+            dispatch(fetchMessage("哇操!你難道是中國新說唱的冠軍嗎?"));
           } else {
             step();
             dispatch(fetchMessage("厲害，你才是最強的天籟唱將。"));
@@ -610,6 +740,17 @@ const Scene1EventHandler = (map: Map) => {
           if (hero.name === "arwei") {
             step();
             dispatch(fetchMessage("楊坤嚇跑了。"));
+          } else if (hero.name === "lock1ng") {
+            step();
+            dispatch(fetchMessage("楊坤自愧不如，將導師之位讓賢，全能力x2"));
+            dispatch(
+              fetch({
+                ...hero,
+                hp: hero.hp * 2,
+                atk: hero.atk * 2,
+                def: hero.def * 2,
+              })
+            );
           } else {
             step();
             dispatch(fetchMessage("楊坤甘拜下風，將獎金都頒給你了。"));
@@ -659,6 +800,12 @@ const Scene1EventHandler = (map: Map) => {
 
     // 獸人
     if (getName() === "smorc") {
+      if (hero.name === "lock1ng") {
+        step();
+        dispatch(fetchMessage("你隱蔽的繞到獸人背後，一擊必殺。獲得1000元。"));
+        dispatch(fetch({ ...hero, money: hero.money + 1000 }));
+        return;
+      }
       if (hero.name === "butt") {
         step();
         dispatch(fetchMessage("獸人為酋長夫人獻上1000元。"));
@@ -678,7 +825,15 @@ const Scene1EventHandler = (map: Map) => {
 
     // Afa
     if (getName() === "afa") {
-      if (hero.name === "sam") {
+      if (hero.name === "lock1ng") {
+        if (getExists() < 4) {
+          stepUp();
+          dispatch(fetchMessage("阿法大口一吃，被你靈巧的閃過了。"));
+        } else {
+          dispatch(fetchMessage("你露出了破綻，被大口一吃一萬塊。"));
+          dispatch(fetch({ ...hero, money: hero.money - 10000 }));
+        }
+      } else if (hero.name === "sam") {
         if (getExists() === 2) {
           step();
           dispatch(fetchMessage("不．共．戴．天。"));
@@ -708,7 +863,16 @@ const Scene1EventHandler = (map: Map) => {
         dispatch(fetch({ ...hero, def: hero.def + 20 }));
         step();
       } else {
-        if (hero.letter) {
+        if (hero.name === "lock1ng" && hero.letter) {
+          if (getExists() === 2) {
+            dispatch(fetchMessage("你拿出了湘湘的信(偽造)。"));
+            step();
+          } else if (getExists() === 1) {
+            dispatch(fetchMessage("阿蛋用鑰匙跟你交換。"));
+            dispatch(fetch({ ...hero, key: hero.key + 1 }));
+            step();
+          }
+        } else if (hero.letter) {
           if (getExists() === 2) {
             dispatch(fetchMessage("我的信?讓我瞧瞧。"));
             step();
@@ -724,6 +888,10 @@ const Scene1EventHandler = (map: Map) => {
 
     // 500
     if (getName() === "sta") {
+      if (hero.name === "lock1ng") {
+        dispatch(fetchMessage("System Error : cannot find element 'Lock1ng'."));
+        return;
+      }
       if (hero.name === "butt") {
         step();
         dispatch(
@@ -739,7 +907,33 @@ const Scene1EventHandler = (map: Map) => {
 
     // K7
     if (getName() === "k7") {
-      if (hero.name === "butt") {
+      if (hero.name === "lock1ng") {
+        if (getExists() === 3) {
+          stepUp();
+          dispatch(fetchMessage("嗨!要加入凱琪娛樂嗎?"));
+        } else if (getExists() === 4) {
+          stepUp();
+          dispatch(fetchMessage("你是那個..."));
+        } else {
+          if (hero?.auth) {
+            if (getExists() === 5) {
+              stepUp();
+              dispatch(fetchMessage("你拿出了RB的名片。"));
+            } else if (getExists() === 6) {
+              stepUp();
+              dispatch(fetchMessage("阿!原來是RB的朋友阿。"));
+            } else if (getExists() === 7) {
+              stepUp();
+              dispatch(fetchMessage("從凱琪那邊拿到鑰匙。"));
+              dispatch(fetch({ ...hero, key: hero.key + 1 }));
+            } else if (getExists() === 8) {
+              dispatch(fetchMessage("嗨!你是劉..."));
+            }
+          } else {
+            dispatch(fetchMessage("凱琪想不起來你是誰。"));
+          }
+        }
+      } else if (hero.name === "butt") {
         if (getExists() === 2) {
           step();
           dispatch(fetchMessage("ｋ７幫你發了工商文，得到3000塊。"));

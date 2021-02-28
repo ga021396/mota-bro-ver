@@ -12,6 +12,7 @@ const initHero = {
   name: "",
   des: "",
   money: 0,
+  key: 0,
 };
 
 export const item = createReducer(initHero).handleAction(

@@ -42,6 +42,10 @@ function Scene6() {
 
       case "buttAgo":
         return "https://www.youtube.com/watch?v=ZtVrju_QeHs";
+
+      case "lock1ng":
+        if (hero.end) return "https://www.youtube.com/watch?v=GLrchVDvZ8M";
+        else return "https://www.youtube.com/watch?v=BRoN7r_b0zk&";
     }
   };
 

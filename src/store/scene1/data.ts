@@ -489,3 +489,119 @@ export const initMapLocking3 = [
   [0, 0, 0, w, 0, dr, 0, 0, dr, 0, w],
   [0, 0, 0, w, w, w, 0, 0, w, w, w],
 ];
+
+const mic = { exists: 1, name: "mic" };
+
+const mon = { exists: 1, name: "mon" };
+
+export const initMap5Locking = [
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingFull = [
+  [w, w, w, w, 0, sam, 0, w, w, w, w],
+  [w, w, w, w, rb, 0, wei, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, mon, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingRBwei = [
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, rb, 0, wei, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingRBsam = [
+  [w, w, w, w, 0, sam, 0, w, w, w, w],
+  [w, w, w, w, rb, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingSamWei = [
+  [w, w, w, w, 0, sam, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, wei, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingSam = [
+  [w, w, w, w, 0, sam, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingWei = [
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, wei, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5LockingRB = [
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, rb, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, mic, 0, w, w, w, w],
+  [w, w, w, w, w, 0, w, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
+];

@@ -14,6 +14,7 @@ const AR = {
   name: "arwei",
   des: "AR．Wei是一名矮人，由於身高較矮容易擊中敵人弱點，傷害較高。",
   money: 0,
+  key: 0,
 };
 
 const SAM = {
@@ -25,6 +26,7 @@ const SAM = {
   name: "sam",
   des: "Sam是個憂鬱症患者，由於長期服藥血量與毒抗較高，空幹速度最快。",
   money: 0,
+  key: 0,
 };
 
 const RB = {
@@ -36,6 +38,7 @@ const RB = {
   name: "rb",
   des: "R．B是一位牛郎，與女NPC的親密度較高，由於內褲很多件防禦也比較高。",
   money: 0,
+  key: 0,
 };
 
 const LEE = {
@@ -47,6 +50,7 @@ const LEE = {
   name: "lee",
   des: "",
   money: 0,
+  key: 0,
 };
 
 const BUTT = {
@@ -58,6 +62,7 @@ const BUTT = {
   name: "butt",
   des: "陳霓媗是新一代屁眼女俠，實況風格粗魯下流，又稱副班長、酋長夫人。",
   money: 0,
+  key: 0,
 };
 
 function Opening({ next, exp }: any) {

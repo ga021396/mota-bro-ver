@@ -173,6 +173,22 @@
     background-size: 50px 50px;
     animation: SMORC 1s infinite linear;
   }
+
+  .mon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: url("../../image/twitch.0");
+    background-size: 50px 50px;
+  }
+
+  .mic {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: url("../../image/mic.png");
+    background-size: 50px 50px;
+  }
 }
 
 .wall {
