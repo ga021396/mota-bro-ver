@@ -18,7 +18,7 @@ function Scene6() {
     switch (hero.name) {
       case "sam":
         if (hero.hiddenEnd)
-          return "https://www.youtube.com/watch?v=u_LIkmULba4&t=3s";
+          return "https://www.youtube.com/watch?v=WBOf7PlggBk&ab_channel=OuOSNOW";
         else {
           if (hero.end) return "https://www.youtube.com/watch?v=zwqwZMYhRGc";
           else return "https://www.youtube.com/watch?v=-zANQZ6_8rM";
@@ -36,7 +36,9 @@ function Scene6() {
         return "https://www.youtube.com/watch?v=JDTK8IfJ0q4";
 
       case "butt":
-        return "https://www.youtube.com/watch?v=-VvjY_GYHa4";
+        if (hero.hiddenEnd)
+          return "https://www.youtube.com/watch?v=7pd9vE7NYU0";
+        else return "https://www.youtube.com/watch?v=-VvjY_GYHa4";
 
       case "buttAgo":
         return "https://www.youtube.com/watch?v=ZtVrju_QeHs";

@@ -15,6 +15,7 @@ import {
   initMap5SamHid,
   initMap5Lee,
   initMap5Butt,
+  initMap5ButtHid,
 } from "../../store/scene1/data";
 
 function Scene5() {
@@ -43,7 +44,9 @@ function Scene5() {
           dispatch(fetchScene5(initMap5Lee as Map));
           return;
         case "butt":
-          dispatch(fetchScene5(initMap5Butt as Map));
+          if (hero.hiddenEnd) {
+            dispatch(fetchScene5(initMap5ButtHid as Map));
+          } else dispatch(fetchScene5(initMap5Butt as Map));
           return;
       }
     }

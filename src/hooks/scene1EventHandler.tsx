@@ -6,13 +6,14 @@ import { useDispatch } from "react-redux";
 import { fetch } from "../store/hero/action";
 import { Map } from "../store/scene1/type";
 import { fetchCount, fetchMessage } from "../store/count/action";
+import { fetchScene4, fetchScene3 } from "../store/scene1/action";
+import { initMap4But, initMapLocking3 } from "../store/scene1/data";
 
 const Scene1EventHandler = (map: Map) => {
   const dispatch = useDispatch();
   const hero = useSelector(getHero) as Hero;
 
   const updateLeeMap = (y: number, x: number, map: Map) => {
-    console.log(hero);
     const getName = () => {
       return map?.[y]?.[x]?.name;
     };
@@ -55,10 +56,16 @@ const Scene1EventHandler = (map: Map) => {
       dispatch(fetchCount(6));
       dispatch(fetch({ ...hero, end: true }));
     }
+
+    if (getName() === "fw") {
+      dispatch(fetchCount(1));
+      dispatch(fetch({ ...hero, name: "lock1ng", hp: 10000, x: 5, y: 10 }));
+      dispatch(fetchScene3(initMapLocking3 as Map));
+      fetchMessage("你獲得了LOL M冠軍，大家似乎對你有了印象。");
+    }
   };
 
   const updateScene1 = (y: number, x: number, map: Map) => {
-    console.log(hero);
     const getExists = () => {
       return map?.[y]?.[x]?.exists;
     };
@@ -74,6 +81,10 @@ const Scene1EventHandler = (map: Map) => {
     const stepUp = () => {
       map[y][x] = { ...map[y][x], exists: getExists() + 1 };
     };
+
+    if (getName() === "nextTo6") {
+      dispatch(fetchCount(6));
+    }
 
     // snow
     if (getName() === "snow") {
@@ -291,16 +302,31 @@ const Scene1EventHandler = (map: Map) => {
     // nl
     if (getName() === "nl") {
       if (hero.name === "butt") {
-        if (getExists() === 3) {
-          step();
-          dispatch(fetchMessage("你也到達這裡了嗎，副班長。"));
-        } else if (getExists() === 2) {
-          step();
-          dispatch(fetchMessage("放飛自我，不必在意他人眼光，加油!"));
+        if (hero.hp === 62314) {
+          if (getExists() === 3) {
+            step();
+            dispatch(fetchMessage("熊班長只不過是上個時代的敗北者。"));
+          } else if (getExists() === 2) {
+            step();
+            dispatch(fetchMessage("現在請稱我為，蝶班長!"));
+          } else {
+            step();
+            dispatch(fetchMessage("你除掉了阿熊，晉升為新一代的班長。"));
+            dispatch(fetch({ ...hero, hiddenEnd: true }));
+            dispatch(fetchScene4(initMap4But as Map));
+          }
         } else {
-          step();
-          dispatch(fetchMessage("獲得班長的激勵，得到50000元。"));
-          dispatch(fetch({ ...hero, money: hero.money + 50000 }));
+          if (getExists() === 3) {
+            step();
+            dispatch(fetchMessage("你也到達這裡了嗎，副班長。"));
+          } else if (getExists() === 2) {
+            step();
+            dispatch(fetchMessage("放飛自我，不必在意他人眼光，加油!"));
+          } else {
+            step();
+            dispatch(fetchMessage("獲得班長的激勵，得到50000元。"));
+            dispatch(fetch({ ...hero, money: hero.money + 50000 }));
+          }
         }
       } else {
         if (getExists() === 3) {
@@ -512,7 +538,7 @@ const Scene1EventHandler = (map: Map) => {
           dispatch(fetch({ ...hero, money: hero.money - 10000 }));
         } else if (hero.name === "butt") {
           step();
-          dispatch(fetchMessage("妳大罵一聲7417，對方嚇到撤告了。"));
+          dispatch(fetchMessage("妳大罵一聲7414，對方嚇到撤告了。"));
         } else {
           step();
           dispatch(fetchMessage("對方看到你的臉，決定撤告。"));
@@ -525,6 +551,7 @@ const Scene1EventHandler = (map: Map) => {
       if (hero.name === "butt") {
         step();
         dispatch(fetchMessage("阿緯~~~~阿緯~~~~~~"));
+        dispatch(fetch({ ...hero, hp: hero.hp + 50000 }));
       } else {
         step();
         dispatch(fetchMessage("喝了一口冬瓜露，提升2點防禦。"));
@@ -634,7 +661,7 @@ const Scene1EventHandler = (map: Map) => {
     if (getName() === "smorc") {
       if (hero.name === "butt") {
         step();
-        dispatch(fetchMessage("獸人為猶長夫人獻上1000元。"));
+        dispatch(fetchMessage("獸人為酋長夫人獻上1000元。"));
         dispatch(fetch({ ...hero, money: hero.money + 1000 }));
         return;
       }

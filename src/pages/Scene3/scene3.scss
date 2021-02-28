@@ -184,6 +184,50 @@
     background-image: url("../../image/key.png");
     background-size: 50px 50px;
   }
+
+  .fw {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/Flash_wolves_logo.png");
+    background-size: 50px 50px;
+  }
+
+  .shan {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/shan.0");
+    background-size: 50px 50px;
+    animation: SMORC 1s infinite linear;
+  }
+
+  .rb-l {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/rb_gan.0");
+    background-size: 50px 50px;
+    animation: RBgan 0.3s infinite linear;
+  }
+
+  .sam-l {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/sam_gan.0");
+    background-size: 50px 50px;
+    animation: Samgan 0.3s infinite linear;
+  }
+
+  .wei-l {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url("../../image/ar_gan2.0");
+    background-size: 50px 50px;
+    animation: ARgan 0.3s infinite linear;
+  }
 }
 
 .backTo2 {

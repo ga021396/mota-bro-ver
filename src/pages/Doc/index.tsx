@@ -3,6 +3,9 @@ function Doc({ back }: any) {
   return (
     <div className="scene-container">
       <div className="docCon">
+        <p>
+          2/29 v1.4 update: 修正錯字，新增蝴蝶兒隱藏結局，解鎖LOCK1NG隱藏模式。
+        </p>
         <p>2/27 v1.3 update: 新增蝴蝶兒。</p>
         <p>2/27 v1.2 update: 新增作康。</p>
         <p>2/27 v1.1 update: 修正錯字，新增Sam、RB隱藏結局。</p>

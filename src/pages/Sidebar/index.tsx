@@ -23,6 +23,8 @@ function Sidebar({ stage }: any) {
         return "陳霓媗";
       case "buttAgo":
         return "陳柏禎";
+      case "lock1ng":
+        return "Liu．Lock1ng";
     }
   };
 

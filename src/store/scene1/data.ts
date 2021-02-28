@@ -175,11 +175,16 @@ export const initMap3Sam = [
   [ET, b, b, 0, w, w, w, 0, w, w, w],
 ];
 
+const fw = {
+  exists: 1,
+  name: "fw",
+};
+
 export const initMap3Lee = [
   [b2, w, w, w, 0, w, w, w, 0, 0, n4],
   [0, w, 0, 0, b, w, 0, w, 0, 0, 0],
   [0, w, w, w, 0, w, w, w, 0, 0, 0],
-  [0, b, da, w, b, 0, 0, w, 0, 0, 0],
+  [0, b, da, w, b, 0, fw, w, 0, 0, 0],
   [0, w, w, w, 0, w, w, w, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, b, 0, 0, 0],
   [0, 0, 0, 0, w, w, w, 0, w, w, w],
@@ -421,4 +426,66 @@ export const initMap5Butt = [
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
+];
+
+export const initMap5ButtHid = [
+  [w, w, b, dr, 0, n6, 0, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+  [w, w, b, dr, S, 0, S, dr, b, w, w],
+];
+
+export const initMap4But = [
+  [0, 0, 0, 0, w, n5, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [0, 0, 0, 0, w, 0, w, 0, 0, 0, 0],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+  [S, S, S, S, w, 0, w, S, S, S, S],
+];
+
+const sh = {
+  exists: 2,
+  name: "shan",
+};
+
+const rb = {
+  exists: 3,
+  name: "rb-l",
+};
+
+const sam = {
+  exists: 3,
+  name: "sam-l",
+};
+
+const wei = {
+  exists: 3,
+  name: "wei-l",
+};
+
+export const initMapLocking3 = [
+  [b2, w, sh, b, b, 0, w, 0, 0, 0, n4],
+  [0, w, b, b, b, 0, w, 0, 0, 0, 0],
+  [0, w, b, b, b, 0, w, 0, 0, 0, 0],
+  [0, w, 0, 0, 0, 0, w, 0, 0, 0, 0],
+  [0, w, 0, 0, 0, 0, 0, 0, w, dr, w],
+  [0, w, 0, w, w, w, b, b, w, 0, w],
+  [0, w, 0, w, wei, w, 0, 0, w, rb, w],
+  [0, w, 0, w, 0, w, 0, 0, w, w, w],
+  [0, 0, 0, w, 0, w, 0, 0, dr, sam, w],
+  [0, 0, 0, w, 0, dr, 0, 0, dr, 0, w],
+  [0, 0, 0, w, w, w, 0, 0, w, w, w],
 ];
