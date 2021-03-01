@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mota-bro-ver/static/css/main.b4945bea.chunk.css",
-    "main.js": "/mota-bro-ver/static/js/main.8ec36a70.chunk.js",
-    "main.js.map": "/mota-bro-ver/static/js/main.8ec36a70.chunk.js.map",
+    "main.js": "/mota-bro-ver/static/js/main.bc00ad2e.chunk.js",
+    "main.js.map": "/mota-bro-ver/static/js/main.bc00ad2e.chunk.js.map",
     "runtime-main.js": "/mota-bro-ver/static/js/runtime-main.734b0331.js",
     "runtime-main.js.map": "/mota-bro-ver/static/js/runtime-main.734b0331.js.map",
     "static/js/2.adeef8de.chunk.js": "/mota-bro-ver/static/js/2.adeef8de.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.734b0331.js",
     "static/js/2.adeef8de.chunk.js",
     "static/css/main.b4945bea.chunk.css",
-    "static/js/main.8ec36a70.chunk.js"
+    "static/js/main.bc00ad2e.chunk.js"
   ]
 }

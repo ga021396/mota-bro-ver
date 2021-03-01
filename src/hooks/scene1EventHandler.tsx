@@ -195,7 +195,7 @@ const Scene1EventHandler = (map: Map) => {
     if (getName() === "mic") {
       if (!hero.save) {
         if (getExists() === 1) {
-          dispatch(fetchMessage("星期六，你如約來到了KTV。"));
+          dispatch(fetchMessage("星期一，你如約來到了KTV。"));
           stepUp();
         } else if (getExists() === 2) {
           dispatch(fetchMessage("一如往常的開始RAP。"));
@@ -207,7 +207,7 @@ const Scene1EventHandler = (map: Map) => {
         }
       } else {
         if (getExists() === 1) {
-          dispatch(fetchMessage("星期六，你如約來到了KTV。"));
+          dispatch(fetchMessage("星期一，你如約來到了KTV。"));
           stepUp();
         } else if (getExists() === 2) {
           dispatch(fetchMessage("一如往常的開始RAP。"));
@@ -223,7 +223,7 @@ const Scene1EventHandler = (map: Map) => {
     // wei-l
     if (getName() === "wei-l") {
       if (getExists() === 3) {
-        dispatch(fetchMessage("嗨!禮拜六要載你嗎?"));
+        dispatch(fetchMessage("嗨!禮拜一要載你嗎?"));
         step();
       } else if (getExists() === 2) {
         dispatch(fetchMessage("要的話再打給我耶~"));
@@ -238,10 +238,10 @@ const Scene1EventHandler = (map: Map) => {
     // sam-l
     if (getName() === "sam-l") {
       if (getExists() === 3) {
-        dispatch(fetchMessage("康~哪次步是把你捧在手心上。"));
+        dispatch(fetchMessage("康~哪次不是把你捧在手心上。"));
         step();
       } else if (getExists() === 2) {
-        dispatch(fetchMessage("禮拜六唱歌記得喔!"));
+        dispatch(fetchMessage("禮拜一唱歌記得喔!"));
         step();
       } else {
         dispatch(fetchMessage("家盛先離開了。"));
@@ -256,7 +256,7 @@ const Scene1EventHandler = (map: Map) => {
         dispatch(fetchMessage("喔，作康阿!"));
         step();
       } else if (getExists() === 2) {
-        dispatch(fetchMessage("禮拜六記得別遲到喔!"));
+        dispatch(fetchMessage("禮拜一記得別遲到喔!"));
         step();
       } else {
         dispatch(fetchMessage("RB先一步離開了，不過掉了一張名片。"));
