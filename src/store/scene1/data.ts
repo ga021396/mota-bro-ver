@@ -513,7 +513,7 @@ export const initMap5LockingFull = [
   [w, w, w, w, rb, 0, wei, w, w, w, w],
   [w, w, w, w, 0, mic, 0, w, w, w, w],
   [w, w, w, w, w, 0, w, w, w, w, w],
-  [w, w, w, w, 0, mon, 0, w, w, w, w],
+  [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],
   [w, w, w, w, 0, 0, 0, w, w, w, w],

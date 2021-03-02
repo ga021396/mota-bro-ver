@@ -193,7 +193,19 @@ const Scene1EventHandler = (map: Map) => {
 
     // mic
     if (getName() === "mic") {
-      if (!hero.save) {
+      if (hero.save?.rb && hero.save?.sam && hero.save?.wei) {
+        if (getExists() === 1) {
+          dispatch(fetchMessage("星期一，你如約來到了KTV。"));
+          stepUp();
+        } else if (getExists() === 2) {
+          dispatch(fetchMessage("但就如候補般，我似乎不在舞台上。"));
+          stepUp();
+        } else {
+          dispatch(fetchMessage("難道這就是最好的陣容嗎..."));
+          dispatch(fetchCount(6));
+          dispatch(fetch({ ...hero, end: true, name: "lee" }));
+        }
+      } else if (!hero.save) {
         if (getExists() === 1) {
           dispatch(fetchMessage("星期一，你如約來到了KTV。"));
           stepUp();
@@ -836,11 +848,10 @@ const Scene1EventHandler = (map: Map) => {
       } else if (hero.name === "sam") {
         if (getExists() === 2) {
           step();
-          dispatch(fetchMessage("不．共．戴．天。"));
-          dispatch(fetch({ ...hero, money: hero.money - 999999 }));
+          dispatch(fetchMessage("阿法大口一吃，被你大口一吐抵銷。"));
         } else {
-          dispatch(fetchMessage("不．共．戴．天。"));
-          dispatch(fetch({ ...hero, money: hero.money - 999999 }));
+          dispatch(fetchMessage("大．口．一．吐，阿法被你吐了一身，逃跑了。"));
+          step();
         }
       } else {
         if (getExists() === 2) {

@@ -33,7 +33,8 @@ function Scene6() {
         }
 
       case "lee":
-        return "https://www.youtube.com/watch?v=JDTK8IfJ0q4";
+        if (hero.end) return "https://www.youtube.com/watch?v=GLrchVDvZ8M";
+        else return "https://www.youtube.com/watch?v=JDTK8IfJ0q4";
 
       case "butt":
         if (hero.hiddenEnd)
