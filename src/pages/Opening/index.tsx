@@ -127,11 +127,9 @@ function Opening({ next, exp }: any) {
 
   return (
     <div className="scene-container">
-      <div className="des">兄弟塔 ver1.4</div>
-      {hero.name && hero.name !== "lee" && (
+      {hero.name && hero?.name === "sam" && (
         <div className="titleCon">
-          <div className="title">確定要要選擇 {showName(hero.name)}?</div>
-          {hero.des && <div>{hero.des}</div>}
+          <div className="title">確定要要選擇 Sam1268 ?</div>
         </div>
       )}
 
@@ -155,31 +153,6 @@ function Opening({ next, exp }: any) {
             className={hero?.name === "sam" ? "sam samSelected" : "sam"}
             onClick={() => handleInitHero("sam")}
           ></div>
-        </div>
-
-        <div className="roleCon">
-          <div
-            className={hero?.name === "rb" ? "rb rbSelected" : "rb"}
-            onClick={() => handleInitHero("rb")}
-          ></div>
-        </div>
-
-        <div className="roleCon">
-          <div
-            className={hero?.name === "arwei" ? "arwei arSelected" : "arwei"}
-            onClick={() => handleInitHero("arwei")}
-          ></div>
-        </div>
-
-        <div className="roleCon">
-          <div
-            className={hero?.name === "butt" ? "butt buttSelected" : "butt"}
-            onClick={() => handleInitHero("butt")}
-          ></div>
-        </div>
-
-        <div className="roleCon">
-          <div className="lee" onClick={() => handleInitHero("lee")}></div>
         </div>
       </div>
       <div className="btnCon">
